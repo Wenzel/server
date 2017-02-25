@@ -25,7 +25,7 @@
 			</script>
 		<?php endif; ?>
 		<?php foreach($_['jsfiles'] as $jsfile): ?>
-			<script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php print_unescaped($jsfile); ?>"></script>
+			<script defer nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php print_unescaped($jsfile); ?>"></script>
 		<?php endforeach; ?>
 		<?php print_unescaped($_['headers']); ?>
 	</head>

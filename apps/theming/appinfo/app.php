@@ -44,7 +44,7 @@ $linkToJs = \OC::$server->getURLGenerator()->linkToRoute(
 	]
 );
 \OCP\Util::addHeader(
-	'script',
+	'script defer',
 	[
 		'src' => $linkToJs,
 		'nonce' => \OC::$server->getContentSecurityPolicyNonceManager()->getNonce()
